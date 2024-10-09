@@ -7,13 +7,21 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame ()
     {
-   
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(TransitionToScene());
         //SceneManager.LoadScene(0);
     }
 
+ 
 
-    
+    private IEnumerator TransitionToScene()
+    {
+        // Wait for 2 seconds
+        yield return new WaitForSeconds(2f);
+        // Load the specified scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       
+    }
+
     public void QuitGame ()
     {
         Debug.Log("QUIT!");
