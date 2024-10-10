@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Animator playerAnim;
+
     // Start is called before the first frame update
     public float speed = 3f;
     private float horizontalInput;
@@ -23,7 +25,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+<<<<<<< HEAD
         
+=======
+        playerAnim.GetComponent<Animator>();
+>>>>>>> dc50c4a4ed889d3be8f79748c3880a8d1fb13f7d
     }
 
     // Update is called once per frame
