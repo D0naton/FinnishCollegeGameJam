@@ -10,8 +10,18 @@ public class ItemPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            robotPartManager.AttachEyes();
-            Destroy(gameObject);
+            if (gameObject.CompareTag("Lens"))
+            {
+                robotPartManager.AttachEyes();
+                Destroy(gameObject);
+            }
+
+            if (gameObject.CompareTag("Antenna"))
+            {
+                robotPartManager.AttachAntenni();
+                Destroy(gameObject);
+            }
+
         }
     }
 

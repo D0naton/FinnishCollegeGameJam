@@ -7,7 +7,12 @@ TagManager:
   - Ground
   - Part
   - PickUpItem
+<<<<<<< HEAD
   - 'Player '
+=======
+  - Lens
+  - Antenna
+>>>>>>> 3f0abc13de8d4a622643417178b060c06f419938
   layers:
   - Default
   - TransparentFX
