@@ -12,11 +12,11 @@ public class ItemPickup : MonoBehaviour
         {
             if (gameObject.CompareTag("Lens"))
             {
-                robotPartManager.AttachEyes();
+                robotPartManager.AttachArm();
                 Destroy(gameObject);
             }
 
-            if (gameObject.CompareTag("Antenna"))
+            if (gameObject.CompareTag("Arm"))
             {
                 robotPartManager.AttachAntenni();
                 Destroy(gameObject);
