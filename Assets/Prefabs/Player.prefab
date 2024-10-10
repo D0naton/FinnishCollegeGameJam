@@ -431,7 +431,7 @@ MonoBehaviour:
   groundCheck: {fileID: 0}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!50 &884847477
 Rigidbody2D:
   serializedVersion: 4
