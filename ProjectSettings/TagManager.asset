@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Part
   - PickUpItem
+  - Lens
+  - Antenna
   layers:
   - Default
   - TransparentFX

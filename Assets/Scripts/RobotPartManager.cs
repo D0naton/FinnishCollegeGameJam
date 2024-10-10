@@ -22,6 +22,15 @@ public class RobotPartManager : MonoBehaviour
         }
     }
 
+    public void AttachAntenni()
+    {
+        if (currentAntenni == null)
+        {
+
+            currentAntenni = Instantiate(antenniPrefab, antenniPoint.position, antenniPoint.rotation, antenniPoint);
+        }
+    }
+
     
     public void RemoveEyes()
     {
