@@ -17,7 +17,6 @@ public class FallingPlatforms : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         defaultPos = gameObject.transform.position;
-        
     }
 
     // Update is called once per frame
