@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     private bool doubleJump;
     public bool hasLens;
+    public ParticleSystem dirt;
+    private bool isOnGround;
+    
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -20,6 +23,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -27,9 +31,14 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
+        
+
+        
+
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             doubleJump = false;
+            
         }
 
 
@@ -41,6 +50,8 @@ public class PlayerController : MonoBehaviour
 
                 doubleJump = !doubleJump;
             }
+
+
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -78,5 +89,15 @@ public class PlayerController : MonoBehaviour
             hasLens = true;
             Destroy(other.gameObject);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+            dirt.Play();
+        }
+
     }
 }
