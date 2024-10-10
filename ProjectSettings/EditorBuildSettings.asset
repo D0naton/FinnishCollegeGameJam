@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu Jussi.unity
     guid: 41a2925060cab984b8862ccffe383ea3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SarunVFX.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PlacingGraphicsScene.unity
+    guid: b3f7cdc9d7fb91e4d8e46984eb9a2a7a
   m_configObjects: {}
