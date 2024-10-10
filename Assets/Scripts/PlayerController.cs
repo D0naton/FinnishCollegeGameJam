@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     private bool doubleJump;
     public bool hasLens;
+    private Animator playerAnim;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -54,6 +56,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+        playerAnim.SetTrigger("Walk");
     }
     private bool IsGrounded()
     {
