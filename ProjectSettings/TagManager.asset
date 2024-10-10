@@ -3,21 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Ground
-  - Part
-  - PickUpItem
-<<<<<<< HEAD
-  - 'Player '
-=======
-  - Lens
-  - Antenna
->>>>>>> 3f0abc13de8d4a622643417178b060c06f419938
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
   - 
