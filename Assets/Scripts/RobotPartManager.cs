@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class RobotPartManager : MonoBehaviour
 {
-    public GameObject eyePrefab; 
-    public Transform eyePoint;
+    public GameObject armPrefab; 
+    public Transform armPoint;
     public GameObject antenniPrefab;
     public Transform antenniPoint;
 
-    private GameObject currentEyes;
+    private GameObject currentArm;
     private GameObject currentAntenni;
 
     
-    public void AttachEyes()
+    public void AttachArm()
     {
-        if (currentEyes == null) 
-        {
-            
-            currentEyes = Instantiate(eyePrefab, eyePoint.position, eyePoint.rotation, eyePoint);
+        if (currentArm == null) 
+        { 
+            currentArm = Instantiate(armPrefab, armPoint.position, armPoint.rotation, armPoint);
         }
     }
 
@@ -34,10 +33,10 @@ public class RobotPartManager : MonoBehaviour
     
     public void RemoveEyes()
     {
-        if (currentEyes != null)
+        if (currentArm != null)
         {
-            Destroy(currentEyes); 
-            currentEyes = null; 
+            Destroy(currentArm); 
+            currentArm = null; 
         }
     }
 
