@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class FallingPlatforms : MonoBehaviour
 {
-    private float fallDelay = 1f;
-    private float appearDelay = 2f;
-    private float destroyDelay = 2f;
+    private float timeUntilRespawn = 3f;
+    private float timeUntilDisappear = 1f;
     private Vector2 defaultPos;
 
     [SerializeField] private Rigidbody2D rb;
@@ -18,7 +17,6 @@ public class FallingPlatforms : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         defaultPos = gameObject.transform.position;
-        
     }
 
     // Update is called once per frame
@@ -31,7 +29,7 @@ public class FallingPlatforms : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(PlatformDrop(1f, 3f));
+            StartCoroutine(PlatformDrop(timeUntilDisappear, timeUntilRespawn));
         }
     }
 
