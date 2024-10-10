@@ -217,10 +217,6 @@ PrefabInstance:
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 1398773413}
-    - target: {fileID: 884847480, guid: 9dd5820cb2271484a87a107f435faf91, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 3303221525629190328, guid: 9dd5820cb2271484a87a107f435faf91, type: 3}
       propertyPath: m_RootOrder
       value: 1
